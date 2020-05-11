@@ -12,6 +12,7 @@ public abstract class BasePage {
     protected WebDriverWait wait = new WebDriverWait(driver, 25);
 
 
+//https://github.com/Birnigar/zerobank-automation/blob/master/src/test/resources/features/login.feature
     public BasePage() {
         PageFactory.initElements(driver, this);
     }

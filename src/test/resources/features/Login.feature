@@ -1,6 +1,6 @@
 @login
 Feature: Login
-  As I user I should be able to login
+  As a user I should be able to login
 
   Background: open login page
     Given user is on the login page

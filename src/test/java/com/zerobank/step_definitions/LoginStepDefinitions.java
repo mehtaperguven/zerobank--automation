@@ -8,6 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 
 import java.util.List;
 import java.util.Map;
@@ -45,6 +46,7 @@ public class LoginStepDefinitions {
             loginPage.login(credentials.get("username"), credentials.get("password"));
             System.out.println(credentials.get("username") + " " + credentials.get("password"));
            // Assert.assertEquals(loginPage.getErrorText(), "Login and/or password are wrong.");
+
         }
     }
 
