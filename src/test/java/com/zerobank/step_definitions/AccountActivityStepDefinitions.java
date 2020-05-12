@@ -1,6 +1,7 @@
 package com.zerobank.step_definitions;
 
 import com.zerobank.pages.AccountActivityPage;
+import com.zerobank.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -16,7 +17,12 @@ public class AccountActivityStepDefinitions {
     public void user_navigates_to_account_activity_page() {
         accountActivityPage.navigateTo("Account Activity");
     }
-
+    @Then("user verifies that page title is {string}")
+    public void user_verifies_that_page_title_is(String expected) {
+        String actual=Driver.getDriver().getTitle();
+        Assert.assertEquals(expected, actual);
+        System.out.println(actual);
+    }
 
     @When("user verify dropdown default option is {string}")
     public void user_verify_dropdown_default_option_is(String string) {

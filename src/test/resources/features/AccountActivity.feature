@@ -1,4 +1,4 @@
-
+@account_activity
 Feature: Account activity
   As a user, I want to be able to see all dropdown menu in Account summary page
 
@@ -6,7 +6,8 @@ Feature: Account activity
               Given user is on the login page
               When user login as authorized user
               Then user navigates to account activity page
-  @account_activity1
+              And user verifies that page title is "Zero - Account Activity"
+ # @account_activity1
   Scenario: Visit Account activity page and verify dropdown menu
 
     When user verify dropdown default option is "Savings"
