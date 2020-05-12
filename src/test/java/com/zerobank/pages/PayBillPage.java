@@ -29,4 +29,11 @@ public class PayBillPage extends BasePage {
     public String getMessage(){
         return  messageText.getText();
     }
+
+    @FindBy(id = "pay_saved_payees")
+    public WebElement payButton;
+
+    public void clickToPayButton(){
+        payButton.click();/////////
+    }
 }
