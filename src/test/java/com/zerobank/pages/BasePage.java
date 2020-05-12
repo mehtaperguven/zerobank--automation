@@ -1,6 +1,8 @@
 package com.zerobank.pages;
 
+import com.zerobank.utilities.BrowserUtilities;
 import com.zerobank.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,6 +19,11 @@ public abstract class BasePage {
         PageFactory.initElements(driver, this);
     }
 
+    public void navigateTo(String string){
+        WebElement module=driver.findElement(By.xpath("//a[text()='"+string+"']"));
+        module.click();
+        BrowserUtilities.wait(4);
 
+    }
 
 }
