@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 
         glue = "com/zerobank/step_definitions",
         features = "src/test/resources/features",
-        dryRun =false,
+        dryRun =true,
         strict = false,
         tags = "@account_activity",
         plugin = {

@@ -18,6 +18,11 @@ public class AccountActivityStepDefinitions {
         accountActivityPage.navigateTo("Account Activity");
     }
 
+    @Then("user navigates to {string} page")
+    public void user_navigates_to_page(String string) {
+        accountActivityPage.navigateTo(string);
+    }
+
     @Then("user verifies that page is {string} and title is {string}")
     public void user_verifies_that_page_is_and_title_is(String moduleName, String title) {
         String pageTitle=accountActivityPage.verifyPageTitle(moduleName);
