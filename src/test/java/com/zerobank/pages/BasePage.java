@@ -2,6 +2,7 @@ package com.zerobank.pages;
 
 import com.zerobank.utilities.BrowserUtilities;
 import com.zerobank.utilities.Driver;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,6 +25,11 @@ public abstract class BasePage {
         module.click();
         BrowserUtilities.wait(4);
 
+    }
+
+    public String verifyPageTitle(String moduleName){
+        navigateTo(moduleName);
+        return  Driver.getDriver().getTitle();
     }
 
 }

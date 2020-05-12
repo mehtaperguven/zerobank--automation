@@ -17,11 +17,13 @@ public class AccountActivityStepDefinitions {
     public void user_navigates_to_account_activity_page() {
         accountActivityPage.navigateTo("Account Activity");
     }
-    @Then("user verifies that page title is {string}")
-    public void user_verifies_that_page_title_is(String expected) {
-        String actual=Driver.getDriver().getTitle();
-        Assert.assertEquals(expected, actual);
-        System.out.println(actual);
+
+    @Then("user verifies that page is {string} and title is {string}")
+    public void user_verifies_that_page_is_and_title_is(String moduleName, String title) {
+        String pageTitle=accountActivityPage.verifyPageTitle(moduleName);
+        System.out.println(pageTitle);
+        System.out.println(title);
+        Assert.assertEquals(pageTitle,title);
     }
 
     @When("user verify dropdown default option is {string}")

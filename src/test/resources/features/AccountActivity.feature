@@ -6,7 +6,7 @@ Feature: Account activity
               Given user is on the login page
               When user login as authorized user
               Then user navigates to account activity page
-              And user verifies that page title is "Zero - Account Activity"
+              And user verifies that page is "Account Activity" and title is "Zero - Account Activity"
  # @account_activity1
   Scenario: Visit Account activity page and verify dropdown menu
 
